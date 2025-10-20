@@ -10,6 +10,7 @@ import jakarta.validation.Valid;
 
 public interface UserDao {
 	List<User> getAllUser();
-	User getUserById(Long userId);
+	User getUserById( @Valid Long userId);
 	SignUpDto registerUser(@Valid SignUpDto user);
+	Boolean deleteUserById(@Valid Long userId);
 }

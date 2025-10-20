@@ -18,6 +18,7 @@ import com.devhub.repo.UserRepository;
 import com.devhub.service_interface.UserDao;
 
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 
 @Service
 @Transactional
@@ -45,10 +46,20 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public SignUpDto registerUser(SignUpDto user) {
 		User registerUser = modelMapper.map(user, User.class);
-	
 		User saveUser = userRepo.save(registerUser);
 		
 		return modelMapper.map(saveUser, SignUpDto.class);
+	}
+
+	@Override
+	public Boolean deleteUserById(@Valid Long userId) {
+		if(userRepo.existsById(userId)) {
+			User user = getUserById(userId);
+			user.setActive(false);
+			userRepo.save(user);
+			return true;
+		}
+		return false;
 	}
 	
 
