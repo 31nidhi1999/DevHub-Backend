@@ -12,10 +12,10 @@ import jakarta.validation.Valid;
 
 public interface ProjectDao {
 	ProjectResDto createProject(@Valid @RequestBody ProjectReqDto project);
-	List<Project> getActiveProject();
-	List<Project> getAllProject();
-	Project getProjectById(@Valid @RequestBody Long projId);
+	List<ProjectResDto> getActiveProject();
+	List<ProjectResDto> getAllProject();
+	ProjectResDto getProjectById(@Valid @RequestBody Long projId);
 	Boolean deleteProjectById(@Valid Long projId);
-	List<Project> getAllProjectCreatedByUserId(@Valid Long userId);
+	List<ProjectResDto> getAllProjectCreatedByUserId(@Valid Long userId);
 	
 }

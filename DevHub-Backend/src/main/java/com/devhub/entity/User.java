@@ -3,6 +3,9 @@ package com.devhub.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,6 +18,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name="users")
@@ -22,6 +26,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Setter
 @Getter
+@ToString(callSuper = true)
 public class User extends BaseEntity {
 	
 	@Column(unique = true,nullable = false)
@@ -36,6 +41,12 @@ public class User extends BaseEntity {
 	@Enumerated(EnumType.STRING )
 	private UserRole role;
 	
+	
 	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+	@JsonManagedReference
 	private List<Project> projects = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.LAZY)
+	@JsonManagedReference
+	private List<Task> tasks = new ArrayList<>();
 }

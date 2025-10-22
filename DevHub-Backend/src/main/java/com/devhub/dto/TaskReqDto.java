@@ -10,21 +10,23 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
+
 @Setter
+@Getter
 @NoArgsConstructor
-public class ProjectReqDto {
+public class TaskReqDto {
 	
 	@JsonProperty(access = Access.READ_ONLY)
 	private Long id;
+	
 	@NotNull
-	@Length(max = 20,min = 10)
+	@Length(max = 30,min = 10)
 	private String title;
 	
 	@NotNull
 	@Length(max=200, min=20)
-	private String description;
+    private String description;
 	
-	@NotNull
-	private Long userId;
+	private Long projectId;
+	
 }
