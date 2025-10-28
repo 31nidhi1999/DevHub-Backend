@@ -14,6 +14,6 @@ public class SignInReqDto {
 	private String username;
 	
 	@NotNull
-	@Length(max = 5, min = 20)
+	@Length(max = 20, min = 5)
 	private String password;
 }

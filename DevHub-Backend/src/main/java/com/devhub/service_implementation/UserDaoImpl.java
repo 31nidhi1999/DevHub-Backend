@@ -10,6 +10,7 @@ import org.hibernate.validator.internal.util.logging.LoggerFactory;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.devhub.custome_exception.ResourceNotFoundException;
@@ -18,6 +19,7 @@ import com.devhub.dto.SignUpDto;
 import com.devhub.entity.User;
 import com.devhub.repo.UserRepository;
 import com.devhub.service_interface.UserDao;
+import com.devhub.custome_exception.ApiException;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -33,6 +35,9 @@ public class UserDaoImpl implements UserDao {
 	
 	@Autowired
 	private ModelMapper modelMapper;
+	
+	@Autowired
+	private PasswordEncoder encoder;
 	
 
 
@@ -58,7 +63,13 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public SignUpDto registerUser(SignUpDto user) {
+		log.info("user dao impl registerUser method exceution");
 		User registerUser = modelMapper.map(user, User.class);
+
+		if(userRepo.existsByUsername(user.getUsername())) {
+			throw new ApiException("user alrady exisit");
+		}
+		registerUser.setPassword(encoder.encode(user.getPassword()));
 		User savedUser = userRepo.save(registerUser);
 		  log.debug("User entity saved: {}", savedUser);
           log.info("User registration successful for email: {}", savedUser.getEmail());
