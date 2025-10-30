@@ -11,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.devhub.entity.User;
 
+import io.jsonwebtoken.Claims;
+
 public class CustomUserDetails implements UserDetails {
 	
 	@Autowired
@@ -39,6 +41,11 @@ public class CustomUserDetails implements UserDetails {
 	public String getUsername() {
 		// TODO Auto-generated method stub
 		return user.getUsername();
+	}
+
+	public User getUser() {
+		// TODO Auto-generated method stub
+		return user;
 	}
 
 }

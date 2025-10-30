@@ -19,19 +19,29 @@ import com.devhub.entity.Project;
 import com.devhub.service_interface.ProjectDao;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @CrossOrigin
 @RequestMapping("api/projects")
+@Slf4j
 public class ProjectController {
 	
 	@Autowired
 	private ProjectDao projectDao;
 	
 	@PostMapping("/create")
-	public ResponseEntity<ProjectResDto> createProject(@Valid @RequestBody ProjectReqDto project){
-		System.out.println(project.getUserId());
-		return ResponseEntity.ok(projectDao.createProject(project));
+	public ResponseEntity<ProjectResDto> createProject(@Valid @RequestBody ProjectReqDto projectDto){
+		log.info("📥 Received request to create project: {}", projectDto.getTitle());
+		try {
+			ProjectResDto createdProject = projectDao.createProject(projectDto);
+			log.info("✅ Project created successfully with title: {}", createdProject.getTitle());
+			return ResponseEntity.ok(createdProject);
+		}catch (Exception e) {
+			log.error("❌ Error creating project: {} | Exception: {}", projectDto.getTitle(), e.getMessage(), e);
+            throw e;
+		}
+		
 	}
 	
 	@GetMapping("/active")

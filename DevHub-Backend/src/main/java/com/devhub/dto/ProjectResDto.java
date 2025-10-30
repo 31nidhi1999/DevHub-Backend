@@ -13,6 +13,5 @@ public class ProjectResDto {
 	private String description;
 	private Long userId;
 	private Boolean active;
-	private Long projectId;
 
 }

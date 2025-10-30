@@ -25,7 +25,7 @@ import lombok.ToString;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(callSuper = true)
+@ToString(callSuper = true,exclude = "user")
 public class Project extends BaseEntity {
 	@Column(unique = true,nullable = false)
 	  private String title;

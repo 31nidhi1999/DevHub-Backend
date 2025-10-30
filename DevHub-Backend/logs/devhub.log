@@ -1,0 +1,224 @@
+2025-10-30T13:04:24.118+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Starting DevHubBackendApplication using Java 17.0.12 with PID 4024 (/Users/nidhinayak/Desktop/DevHub-Backend/DevHub-Backend/target/classes started by nidhinayak in /Users/nidhinayak/Desktop/DevHub-Backend/DevHub-Backend)
+2025-10-30T13:04:24.120+05:30 DEBUG 4024 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Running with Spring Boot v4.0.0-SNAPSHOT, Spring v7.0.0-SNAPSHOT
+2025-10-30T13:04:24.121+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-10-30T13:04:24.154+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-30T13:04:24.154+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-30T13:04:24.692+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T13:04:24.732+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2025-10-30T13:04:25.088+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-10-30T13:04:25.097+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-30T13:04:25.097+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-10-30T13:04:25.127+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 972 ms
+2025-10-30T13:04:25.214+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-30T13:04:25.258+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.4.Final
+2025-10-30T13:04:25.591+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-30T13:04:25.619+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-30T13:04:25.727+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6050e97a
+2025-10-30T13:04:25.728+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-30T13:04:25.769+05:30  WARN 4024 --- [DevHub-Backend] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-30T13:04:25.780+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/devhub?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.6
+	Default catalog/schema: devhub/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-30T13:04:26.508+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-30T13:04:26.562+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T13:04:26.614+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-30T13:04:26.775+05:30 DEBUG 4024 --- [DevHub-Backend] [restartedMain] c.d.s.CustomJwtAuthenticationFilter      : Filter 'customJwtAuthenticationFilter' configured for use
+2025-10-30T13:04:26.865+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customeUserDetailsServiceImpl
+2025-10-30T13:04:26.946+05:30  WARN 4024 --- [DevHub-Backend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-30T13:04:27.376+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-10-30T13:04:27.382+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Started DevHubBackendApplication in 3.546 seconds (process running for 9.048)
+2025-10-30T13:04:53.262+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-30T13:04:53.263+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-30T13:04:53.264+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-30T13:05:42.237+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-4] c.devhub.controller.ProjectController    : 📥 Received request to create project: Loan Manager App
+2025-10-30T13:05:42.331+05:30 DEBUG 4024 --- [DevHub-Backend] [http-nio-8080-exec-4] c.d.s.ProjectDaoImpl                     : User entity saved: [FAILED toString()]
+2025-10-30T13:05:42.354+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-4] c.d.s.ProjectDaoImpl                     : User registration successful for email: Loan Manager App
+2025-10-30T13:05:42.370+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-4] c.devhub.controller.ProjectController    : ✅ Project created successfully with title: Loan Manager App
+2025-10-30T13:13:33.829+05:30  INFO 4024 --- [DevHub-Backend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-10-30T13:13:33.833+05:30  INFO 4024 --- [DevHub-Backend] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-30T13:13:33.836+05:30  INFO 4024 --- [DevHub-Backend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2025-10-30T13:13:33.841+05:30  INFO 4024 --- [DevHub-Backend] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T13:13:33.843+05:30  INFO 4024 --- [DevHub-Backend] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-30T13:13:33.847+05:30  INFO 4024 --- [DevHub-Backend] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-30T13:13:33.915+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Starting DevHubBackendApplication using Java 17.0.12 with PID 4024 (/Users/nidhinayak/Desktop/DevHub-Backend/DevHub-Backend/target/classes started by nidhinayak in /Users/nidhinayak/Desktop/DevHub-Backend/DevHub-Backend)
+2025-10-30T13:13:33.915+05:30 DEBUG 4024 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Running with Spring Boot v4.0.0-SNAPSHOT, Spring v7.0.0-SNAPSHOT
+2025-10-30T13:13:33.916+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-10-30T13:13:34.064+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T13:13:34.072+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2025-10-30T13:13:34.145+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-10-30T13:13:34.145+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-30T13:13:34.145+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-10-30T13:13:34.153+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 235 ms
+2025-10-30T13:13:34.175+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-30T13:13:34.202+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-30T13:13:34.203+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-30T13:13:34.206+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b241428
+2025-10-30T13:13:34.206+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-30T13:13:34.207+05:30  WARN 4024 --- [DevHub-Backend] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-30T13:13:34.207+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/devhub?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.6
+	Default catalog/schema: devhub/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-30T13:13:34.272+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-30T13:13:34.286+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T13:13:34.332+05:30 DEBUG 4024 --- [DevHub-Backend] [restartedMain] c.d.s.CustomJwtAuthenticationFilter      : Filter 'customJwtAuthenticationFilter' configured for use
+2025-10-30T13:13:34.371+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customeUserDetailsServiceImpl
+2025-10-30T13:13:34.392+05:30  WARN 4024 --- [DevHub-Backend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-30T13:13:34.544+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-10-30T13:13:34.547+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Started DevHubBackendApplication in 0.653 seconds (process running for 556.225)
+2025-10-30T13:13:34.548+05:30  INFO 4024 --- [DevHub-Backend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-30T13:14:24.003+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-30T13:14:24.004+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-30T13:14:24.005+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-30T13:14:24.015+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-2] c.devhub.controller.ProjectController    : 📥 Received request to create project: Employee Tracker
+2025-10-30T13:14:24.021+05:30 DEBUG 4024 --- [DevHub-Backend] [http-nio-8080-exec-2] c.d.s.ProjectDaoImpl                     : User entity saved: Project(super=com.devhub.entity.Project@73aeaf40, title=Employee Tracker, description=A Spring Boot and React-based web application to manage employee attendance, performance reviews, and task tracking for internal teams., tasks=[])
+2025-10-30T13:14:24.021+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-2] c.d.s.ProjectDaoImpl                     : User registration successful for email: Employee Tracker
+2025-10-30T13:14:24.026+05:30  INFO 4024 --- [DevHub-Backend] [http-nio-8080-exec-2] c.devhub.controller.ProjectController    : ✅ Project created successfully with title: Employee Tracker
+2025-10-30T13:16:09.777+05:30  INFO 4024 --- [DevHub-Backend] [RMI TCP Connection(25)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-30T13:16:09.778+05:30  INFO 4024 --- [DevHub-Backend] [RMI TCP Connection(25)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-30T13:16:09.779+05:30  INFO 4024 --- [DevHub-Backend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2025-10-30T13:16:09.782+05:30  INFO 4024 --- [DevHub-Backend] [RMI TCP Connection(25)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T13:16:09.782+05:30  INFO 4024 --- [DevHub-Backend] [RMI TCP Connection(25)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-30T13:16:09.783+05:30  INFO 4024 --- [DevHub-Backend] [RMI TCP Connection(25)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-30T14:17:40.660+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Starting DevHubBackendApplication using Java 17.0.12 with PID 4654 (/Users/nidhinayak/Desktop/DevHub-Backend/DevHub-Backend/target/classes started by nidhinayak in /Users/nidhinayak/Desktop/DevHub-Backend/DevHub-Backend)
+2025-10-30T14:17:40.663+05:30 DEBUG 4654 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Running with Spring Boot v4.0.0-SNAPSHOT, Spring v7.0.0-SNAPSHOT
+2025-10-30T14:17:40.664+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-10-30T14:17:40.701+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-30T14:17:40.702+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-30T14:17:41.342+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T14:17:41.390+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2025-10-30T14:17:41.815+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-10-30T14:17:41.825+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-30T14:17:41.826+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-10-30T14:17:41.858+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1156 ms
+2025-10-30T14:17:41.952+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-30T14:17:42.010+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.4.Final
+2025-10-30T14:17:42.432+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-30T14:17:42.464+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-30T14:17:42.606+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c03a650
+2025-10-30T14:17:42.608+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-30T14:17:42.652+05:30  WARN 4654 --- [DevHub-Backend] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-30T14:17:42.667+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/devhub?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.6
+	Default catalog/schema: devhub/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-30T14:17:43.545+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-30T14:17:43.607+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T14:17:43.665+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-30T14:17:43.849+05:30 DEBUG 4654 --- [DevHub-Backend] [restartedMain] c.d.s.CustomJwtAuthenticationFilter      : Filter 'customJwtAuthenticationFilter' configured for use
+2025-10-30T14:17:43.964+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customeUserDetailsServiceImpl
+2025-10-30T14:17:44.053+05:30  WARN 4654 --- [DevHub-Backend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-30T14:17:44.556+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-10-30T14:17:44.562+05:30  INFO 4654 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Started DevHubBackendApplication in 4.257 seconds (process running for 9.903)
+2025-10-30T14:27:26.985+05:30  INFO 4654 --- [DevHub-Backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-30T14:27:26.985+05:30  INFO 4654 --- [DevHub-Backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-30T14:27:26.987+05:30  INFO 4654 --- [DevHub-Backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-30T14:31:11.696+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Starting DevHubBackendApplication using Java 17.0.12 with PID 4811 (/Users/nidhinayak/Desktop/DevHub-Backend/DevHub-Backend/target/classes started by nidhinayak in /Users/nidhinayak/Desktop/DevHub-Backend/DevHub-Backend)
+2025-10-30T14:31:11.698+05:30 DEBUG 4811 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Running with Spring Boot v4.0.0-SNAPSHOT, Spring v7.0.0-SNAPSHOT
+2025-10-30T14:31:11.699+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-10-30T14:31:11.734+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-30T14:31:11.734+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-30T14:31:12.386+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T14:31:12.440+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2025-10-30T14:31:12.842+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-10-30T14:31:12.852+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-30T14:31:12.853+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-10-30T14:31:12.882+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1148 ms
+2025-10-30T14:31:12.977+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-30T14:31:13.020+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.4.Final
+2025-10-30T14:31:13.417+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-30T14:31:13.451+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-30T14:31:13.593+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ae18ece
+2025-10-30T14:31:13.594+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-30T14:31:13.634+05:30  WARN 4811 --- [DevHub-Backend] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-30T14:31:13.646+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/devhub?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.6
+	Default catalog/schema: devhub/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-30T14:31:14.433+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-30T14:31:14.518+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T14:31:14.577+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-30T14:31:14.758+05:30 DEBUG 4811 --- [DevHub-Backend] [restartedMain] c.d.s.CustomJwtAuthenticationFilter      : Filter 'customJwtAuthenticationFilter' configured for use
+2025-10-30T14:31:14.872+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customeUserDetailsServiceImpl
+2025-10-30T14:31:14.957+05:30  WARN 4811 --- [DevHub-Backend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-30T14:31:15.431+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-10-30T14:31:15.438+05:30  INFO 4811 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Started DevHubBackendApplication in 4.104 seconds (process running for 9.816)
+2025-10-30T14:31:16.494+05:30  INFO 4811 --- [DevHub-Backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-30T14:31:16.494+05:30  INFO 4811 --- [DevHub-Backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-30T14:31:16.498+05:30  INFO 4811 --- [DevHub-Backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-10-30T14:31:17.057+05:30  INFO 4811 --- [DevHub-Backend] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 278 ms
+2025-10-30T14:40:33.718+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Starting DevHubBackendApplication using Java 17.0.12 with PID 4913 (/Users/nidhinayak/Desktop/DevHub-Backend/DevHub-Backend/target/classes started by nidhinayak in /Users/nidhinayak/Desktop/DevHub-Backend/DevHub-Backend)
+2025-10-30T14:40:33.720+05:30 DEBUG 4913 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Running with Spring Boot v4.0.0-SNAPSHOT, Spring v7.0.0-SNAPSHOT
+2025-10-30T14:40:33.721+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-10-30T14:40:33.757+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-30T14:40:33.757+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-30T14:40:34.393+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T14:40:34.440+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2025-10-30T14:40:34.848+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-10-30T14:40:34.857+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-30T14:40:34.858+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.13]
+2025-10-30T14:40:34.887+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1130 ms
+2025-10-30T14:40:34.973+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-30T14:40:35.018+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.4.Final
+2025-10-30T14:40:35.399+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-30T14:40:35.427+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-30T14:40:35.559+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73f6a1dd
+2025-10-30T14:40:35.561+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-30T14:40:35.600+05:30  WARN 4913 --- [DevHub-Backend] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-30T14:40:35.614+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/devhub?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.6
+	Default catalog/schema: devhub/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-30T14:40:36.413+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-30T14:40:36.475+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T14:40:36.533+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-30T14:40:36.715+05:30 DEBUG 4913 --- [DevHub-Backend] [restartedMain] c.d.s.CustomJwtAuthenticationFilter      : Filter 'customJwtAuthenticationFilter' configured for use
+2025-10-30T14:40:36.827+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customeUserDetailsServiceImpl
+2025-10-30T14:40:36.911+05:30  WARN 4913 --- [DevHub-Backend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-30T14:40:37.397+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-10-30T14:40:37.403+05:30  INFO 4913 --- [DevHub-Backend] [restartedMain] com.devhub.DevHubBackendApplication      : Started DevHubBackendApplication in 4.028 seconds (process running for 9.729)
+2025-10-30T14:40:42.598+05:30  INFO 4913 --- [DevHub-Backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-30T14:40:42.598+05:30  INFO 4913 --- [DevHub-Backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-30T14:40:42.600+05:30  INFO 4913 --- [DevHub-Backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-30T14:40:43.146+05:30  INFO 4913 --- [DevHub-Backend] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 273 ms

@@ -37,20 +37,22 @@ public class ProjectDaoImpl implements ProjectDao {
 
 	@Override
 	public ProjectResDto createProject(@Valid ProjectReqDto project) {
-		
-		User user = userRepo.findById(project.getUserId()).orElseThrow(()-> new ResourceNotFoundException("User",project.getUserId(),HttpStatus.NOT_FOUND));
-		
-		Project mapProj = modelMapper.map(project, Project.class);
-		System.out.println(project.getUserId());
-		
-		
-		
-		mapProj.setUser(user);
-		user.getProjects().add(mapProj);
-		Project savedProj = projectRepo.save(mapProj);
-		log.debug("User entity saved: {}", savedProj);
-		log.info("User registration successful for email: {}", savedProj.getTitle());
-		return modelMapper.map(savedProj, ProjectResDto.class);
+		log.info("🚀 Starting project creation for userId: {}", project.getUserId());
+		try {
+			User user = userRepo.findById(project.getUserId()).orElseThrow(()-> new ResourceNotFoundException("User",project.getUserId(),HttpStatus.NOT_FOUND));
+			
+			Project mapProj = modelMapper.map(project, Project.class);
+			System.out.println(project.getUserId());
+			mapProj.setUser(user);
+			user.getProjects().add(mapProj);
+			Project savedProj = projectRepo.save(mapProj);
+			log.debug("Project entity saved: {}", savedProj);
+            log.info("✅ Project '{}' created successfully for user: {}", savedProj.getTitle(), user.getUsername());
+			return modelMapper.map(savedProj, ProjectResDto.class);
+		}catch(Exception e){
+			log.error("❌ Error while creating project for userId: {} | Exception: {}", project.getUserId(), e.getMessage(), e);
+            throw e;
+		}	
 	}
 
 	@Override

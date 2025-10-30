@@ -17,7 +17,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 	
 	@Autowired
-	private CustomJwtAuthenticationFilter jwtFilter;
+	private CustomJwtAuthenticationFilter custJwtFilter;
 	
 	@Bean
 	public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception{
@@ -40,13 +40,15 @@ public class SecurityConfig {
 	                "/api/user/register",
 	                "/api/user/login"
 	            ).permitAll()
+	            
 	            .requestMatchers(HttpMethod.OPTIONS).permitAll()
+	            .requestMatchers("/api/projects/create").hasAuthority("ADMIN")
 	            .anyRequest().authenticated()
 	        )
 	        .formLogin(form -> form.disable())
 	        .httpBasic(basic -> basic.disable())
 	        .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-	        .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+	        .addFilterBefore(custJwtFilter, UsernamePasswordAuthenticationFilter.class);
 
 	    return http.build();
 	}

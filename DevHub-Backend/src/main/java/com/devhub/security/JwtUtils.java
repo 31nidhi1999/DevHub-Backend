@@ -21,6 +21,8 @@ import jakarta.annotation.PostConstruct;
 
 @Component
 public class JwtUtils {
+
+    private final CustomeUserDetailsServiceImpl customeUserDetailsServiceImpl;
 	@Value("${SECRET_KEY}")
 	private String jwtSecret;
 	
@@ -28,6 +30,10 @@ public class JwtUtils {
 	private int jwtExpirationMs;
 	
 	private Key key;
+
+    JwtUtils(CustomeUserDetailsServiceImpl customeUserDetailsServiceImpl) {
+        this.customeUserDetailsServiceImpl = customeUserDetailsServiceImpl;
+    }
 	
 	@PostConstruct
 	private void init() {
@@ -37,12 +43,14 @@ public class JwtUtils {
 	//generate token for verified user
 	public String generateJwtToken(Authentication authentication) {
 		CustomUserDetails userPrincipal=(CustomUserDetails)authentication.getPrincipal();
+		System.out.println("authorities" + userPrincipal.getAuthorities());
+		System.out.println("user_id " + userPrincipal.getUsername());
 		return Jwts
 				.builder()
 				.setSubject(userPrincipal.getUsername())
 				.setIssuedAt(new Date((new Date()).getTime() + jwtExpirationMs))
-				.claim("authorities", userPrincipal.getAuthorities())
-				.claim("user_id", userPrincipal.getUsername())
+				.claim("authorities", getAuthoritiesInString(userPrincipal.getAuthorities()))
+				.claim("user_id",userPrincipal.getUser().getId())
 				.signWith(key,SignatureAlgorithm.HS256)
 				.compact();
 		
@@ -80,13 +88,14 @@ public class JwtUtils {
 	}
 	
 		public List<GrantedAuthority> getAuthoritiesFromClaims(Claims claims) {
-		String authString = (String) claims.get("authorities");
+		String authString = (String)claims.get("authorities");
 		List<GrantedAuthority> authorities = AuthorityUtils.commaSeparatedStringToAuthorityList(authString);
 		authorities.forEach(System.out::println);
 		return authorities;
 	}
 	
 			public Long getUserIdFromJwtToken(Claims claims) {
+				System.out.println("claims user id "+ claims.get("user_id"));
 				return Long.valueOf((int)claims.get("user_id"));			
 			}
 			
