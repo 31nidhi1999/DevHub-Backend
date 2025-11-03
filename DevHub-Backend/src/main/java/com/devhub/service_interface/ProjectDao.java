@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.devhub.dto.ProjectReqDto;
 import com.devhub.dto.ProjectResDto;
-import com.devhub.entity.Project;
 
 import jakarta.validation.Valid;
 

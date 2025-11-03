@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.devhub.dto.ProjectReqDto;
 import com.devhub.dto.ProjectResDto;
-import com.devhub.entity.Project;
 import com.devhub.service_interface.ProjectDao;
 
 import jakarta.validation.Valid;

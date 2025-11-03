@@ -16,5 +16,6 @@ public interface TaskDao {
 	Boolean deleteTaskById(@Valid Long taskId);
 	List<TaskResDto> getAllTaskUnderProjectId(@Valid Long projId);
 	TaskResDto assignTaskToUserId(@Valid Long taskId, @Valid Long userId);
+	TaskResDto updateTaskById(@Valid Long taskId, @Valid TaskReqDto taskDto);
 	
 }

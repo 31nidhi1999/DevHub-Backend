@@ -16,14 +16,15 @@ public class EmailService {
 	
 	public void send(String to, String subject, String body) {
 		try {
+			log.info("Preparing to send email to={}", to);
 			SimpleMailMessage mail = new SimpleMailMessage();
 			mail.setTo(to);
 			mail.setSubject(subject);
 			mail.setText(body);
-			
 			javaMailSender.send(mail);
-		}catch (Exception e) {
-			// TODO: handle exception
+			log.info("Email sent successfully to={}", to);
+		} catch (Exception e) {
+			log.error("Failed to send email to={} subject={}. Error: {}", to, subject, e.getMessage(), e);
 		}
 	}
 }

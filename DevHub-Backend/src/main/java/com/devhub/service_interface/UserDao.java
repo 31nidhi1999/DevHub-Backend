@@ -2,7 +2,6 @@ package com.devhub.service_interface;
 
 import java.util.List;
 
-import com.devhub.dto.ApiResponse;
 import com.devhub.dto.SignUpDto;
 import com.devhub.entity.User;
 

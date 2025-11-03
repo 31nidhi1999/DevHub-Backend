@@ -11,7 +11,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.devhub.entity.User;
 
-import io.jsonwebtoken.Claims;
 
 public class CustomUserDetails implements UserDetails {
 	
